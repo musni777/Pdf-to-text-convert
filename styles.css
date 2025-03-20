@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    background-color: #0a0a0a; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container for the content */
+.container {
+    text-align: center;
+    background-color: #1a1a1a; /* Dark gray background */
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Neon glow */
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+/* Neon glow effect for the container */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff, #ff00ff);
+    border-radius: 15px;
+    z-index: -1;
+    animation: glow 4s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00ffff; /* Neon cyan */
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Glow effect */
+}
+
+/* Upload Section */
+.upload-section {
+    margin-bottom: 20px;
+}
+
+/* File Input Label */
+.upload-label {
+    background-color: #333;
+    color: #00ffff; /* Neon cyan */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #00ffff;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.upload-label:hover {
+    background-color: #444;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Glow effect */
+}
+
+/* Buttons */
+button {
+    background-color: #333;
+    color: #00ffff; /* Neon cyan */
+    border: 1px solid #00ffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #444;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Glow effect */
+}
+
+button:disabled {
+    background-color: #222;
+    color: #666;
+    border-color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Output Section */
+.output-section {
+    width: 100%;
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    background-color: #222;
+    color: #00ffff; /* Neon cyan */
+    border: 1px solid #00ffff;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Subtle glow */
+}
+
+/* Download Button */
+#downloadBtn {
+    background-color: #333;
+    color: #00ff00; /* Neon green */
+    border: 1px solid #00ff00;
+    margin-top: 20px;
+}
+
+#downloadBtn:hover:not(:disabled) {
+    background-color: #444;
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; /* Glow effect */
+}
+
+/* Add the Orbitron font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
